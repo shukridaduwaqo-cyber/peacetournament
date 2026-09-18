@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moyale All Star Cross Border Peace Tournament 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-in">
+        <a href="#top" class="brand">
+            <div class="logo">M</div>
+            <div><b>Moyale All Star</b><span>Peace Tournament 2026</span></div>
+        </a>
+        <div class="nlinks">
+            <a href="#standings">Standings</a>
+            <a href="#fixtures">Fixtures</a>
+            <a href="#scorers">Scorers</a>
+            <a href="#bracket">Bracket</a>
+            <a href="#teams">Teams</a>
+            <a href="#rules">Rules</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero" id="top">
+    <div class="glow g1"></div>
+    <div class="glow g2"></div>
+    <div class="hero-c">
+        <div class="tag"><span class="dot"></span>Sep 18 – Sep 30, 2026 • Moyale, Kenya</div>
+        <h1>Moyale All Star <span class="gold">Cross Border</span> Peace Tournament</h1>
+        <p class="sub">Promoting <strong>Unity</strong>, <strong>Brotherhood</strong> &amp; <strong>Youth Development</strong> through the beautiful game. Sixteen teams. Four pools. One champion.</p>
+        <div class="ctas">
+            <a href="#standings" class="btn bp">📊 View Standings</a>
+            <a href="#fixtures" class="btn bg">⚽ Match Fixtures</a>
+        </div>
+        <div class="cd">
+            <div class="cdb"><span class="cdn" id="cd1">00</span><span class="cdl">Days</span></div>
+            <div class="cdb"><span class="cdn" id="cd2">00</span><span class="cdl">Hours</span></div>
+            <div class="cdb"><span class="cdn" id="cd3">00</span><span class="cdl">Minutes</span></div>
+            <div class="cdb"><span class="cdn" id="cd4">00</span><span class="cdl">Seconds</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stats-in">
+        <div class="st"><span class="si">🏆</span><span class="sn">16</span><span class="sl">Teams</span></div>
+        <div class="st"><span class="si">⚽</span><span class="sn">24</span><span class="sl">Group Matches</span></div>
+        <div class="st"><span class="si">🎯</span><span class="sn">4</span><span class="sl">Pools</span></div>
+        <div class="st"><span class="si">📅</span><span class="sn">13</span><span class="sl">Days</span></div>
+        <div class="st"><span class="si">🥇</span><span class="sn">8</span><span class="sl">Knockout Spots</span></div>
+    </div>
+</section>
+
+<section id="standings">
+    <div class="wrap">
+        <div class="sh">
+            <span class="eyebrow">Live Table</span>
+            <h2>Pool Standings</h2>
+            <p>Real-time points table updated automatically by the tournament organizers.</p>
+        </div>
+        <div class="tabs">
+            <button type="button" class="tab on" onclick="selectPool('POOL A',this)">Pool A</button>
+            <button type="button" class="tab" onclick="selectPool('POOL B',this)">Pool B</button>
+            <button type="button" class="tab" onclick="selectPool('POOL C',this)">Pool C</button>
+            <button type="button" class="tab" onclick="selectPool('POOL D',this)">Pool D</button>
+        </div>
+        <div class="sw">
+            <table class="stb">
+                <thead><tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>F:A</th><th>+/-</th><th>Pts</th></tr></thead>
+                <tbody id="stBody"><tr><td colspan="9" style="text-align:center;padding:24px;color:#64748b;">Loading live data…</td></tr></tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section id="fixtures" style="background:linear-gradient(180deg,transparent,rgba(11,20,40,.6),transparent)">
+    <div class="wrap">
+        <div class="sh">
+            <span class="eyebrow">Schedule</span>
+            <h2>Fixtures &amp; Results</h2>
+            <p>Match scores and goal scorers from all group-stage fixtures.</p>
+        </div>
+        <div class="fctl">
+            <input type="text" id="searchIn" class="search" onkeyup="applyFilters()" placeholder="🔍  Search team name...">
+            <div class="chips">
+                <button type="button" class="chip on" onclick="filterPool('ALL',this)">All</button>
+                <button type="button" class="chip" onclick="filterPool('POOL A',this)">A</button>
+                <button type="button" class="chip" onclick="filterPool('POOL B',this)">B</button>
+                <button type="button" class="chip" onclick="filterPool('POOL C',this)">C</button>
+                <button type="button" class="chip" onclick="filterPool('POOL D',this)">D</button>
+            </div>
+            <span id="liveDot" style="margin-left:auto;font-size:11px;font-weight:700;color:#22c55e;letter-spacing:.05em;">● LIVE</span>
+        </div>
+        <div class="flist" id="flist"></div>
+    </div>
+</section>
+
+<section id="scorers">
+    <div class="wrap">
+        <div class="sh">
+            <span class="eyebrow">Golden Boot</span>
+            <h2>Top Scorers</h2>
+            <p>The tournament's leading goalscorers.</p>
+        </div>
+        <div class="scl" id="scl"><div class="empty">No goals recorded yet.</div></div>
+    </div>
+</section>
+
+<section id="bracket" style="background:linear-gradient(180deg,transparent,rgba(11,20,40,.6),transparent)">
+    <div class="wrap">
+        <div class="sh"><span class="eyebrow">Road to Glory</span><h2>Knockout Bracket</h2><p>Top two from each pool advance to the quarter-finals.</p></div>
+        <div class="br">
+            <div>
+                <h4>Quarter-Finals</h4>
+                <div class="bm"><div class="bt"><span class="tbd">Winner Pool A</span><span>—</span></div><div class="bt"><span class="tbd">Runner-up Pool B</span><span>—</span></div></div>
+                <div class="bm"><div class="bt"><span class="tbd">Winner Pool C</span><span>—</span></div><div class="bt"><span class="tbd">Runner-up Pool D</span><span>—</span></div></div>
+                <div class="bm"><div class="bt"><span class="tbd">Winner Pool B</span><span>—</span></div><div class="bt"><span class="tbd">Runner-up Pool A</span><span>—</span></div></div>
+                <div class="bm"><div class="bt"><span class="tbd">Winner Pool D</span><span>—</span></div><div class="bt"><span class="tbd">Runner-up Pool C</span><span>—</span></div></div>
+            </div>
+            <div>
+                <h4>Semi-Finals</h4>
+                <div class="bm" style="margin-top:50px;margin-bottom:80px"><div class="bt"><span class="tbd">Winner QF1</span><span>—</span></div><div class="bt"><span class="tbd">Winner QF2</span><span>—</span></div></div>
+                <div class="bm"><div class="bt"><span class="tbd">Winner QF3</span><span>—</span></div><div class="bt"><span class="tbd">Winner QF4</span><span>—</span></div></div>
+            </div>
+            <div>
+                <h4>Final</h4>
+                <div class="bm" style="margin-top:110px"><div class="bt"><span class="tbd">Winner SF1</span><span>—</span></div><div class="bt"><span class="tbd">Winner SF2</span><span>—</span></div></div>
+                <div style="text-align:center;margin-top:24px">
+                    <div style="font-size:40px">🏆</div>
+                    <div style="font-family:'Bebas Neue',sans-serif;color:#f7c548;font-size:19px;letter-spacing:.1em">Champion 2026</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="teams">
+    <div class="wrap">
+        <div class="sh"><span class="eyebrow">The Contenders</span><h2>Participating Teams</h2><p>Sixteen teams from across the Moyale border region.</p></div>
+        <div class="tgrid" id="tgrid"></div>
+    </div>
+</section>
+
+<section id="rules" style="background:linear-gradient(180deg,transparent,rgba(11,20,40,.6),transparent)">
+    <div class="wrap">
+        <div class="sh"><span class="eyebrow">Regulations</span><h2>Competition Rules</h2><p>The official framework governing the tournament.</p></div>
+        <div class="rgrid">
+            <div class="rcard"><span class="ricon">🎯</span><h4>Points System</h4><p>Three points for a win, one for a draw, zero for a loss.</p></div>
+            <div class="rcard"><span class="ricon">📊</span><h4>Ranking Order</h4><p>Points → Goal Difference → Goals For → Head-to-Head.</p></div>
+            <div class="rcard"><span class="ricon">🥇</span><h4>Qualification</h4><p>Top two from each pool advance to the quarter-finals.</p></div>
+            <div class="rcard"><span class="ricon">⏱️</span><h4>Match Duration</h4><p>Two 45-minute halves with a 15-minute break.</p></div>
+            <div class="rcard"><span class="ricon">🤝</span><h4>Fair Play</h4><p>Respect for opponents, officials and fans is mandatory.</p></div>
+            <div class="rcard"><span class="ricon">🕊️</span><h4>Spirit of Peace</h4><p>Promoting unity and brotherhood across the border.</p></div>
+        </div>
+    </div>
+</section>
+
+<footer class="ftr">
+    <div class="fbr">MOYALE ALL STAR CROSS BORDER PEACE TOURNAMENT</div>
+    <p class="ftag">Promoting Unity, Brotherhood &amp; Youth Development Through Football</p>
+    <p class="fcopy">© 2026 Moyale All Star Cross Border Peace Tournament • Live data refreshes automatically</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
